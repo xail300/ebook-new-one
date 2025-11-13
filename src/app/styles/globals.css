@@ -22,7 +22,7 @@ h4,
 h5,
 h6 {
   margin-bottom: 15px;
-  color: #000001;
+  color: #3F3D52;
   margin-top: 0;
   line-height: 1.5;
   font-family: "Advent Pro", sans-serif;
@@ -139,25 +139,20 @@ ul.dropdown-menu {
 }
 
 .section-title span {
-  color: #D3ED05;
-  font-size: 17px;
-  font-weight: 600;
-  text-transform: uppercase;
+  color: #2E3192;
 }
 
 .section-title h2,
-.section-title h3 {
-  font-size: 58px;
-  line-height: 82px;
-  letter-spacing: -2.22917px;
-  color: white;
-  text-transform: uppercase;
+.section-title h3,
+.section-title span {
+  font-weight: 500;
+  font-size: 45.3943px;
+  line-height: 53px;
 }
 
 .section-title p {
-  color: #FFFFFF;
-  font-size: 20.0625px;
-  opacity: 0.6;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* header */
@@ -175,7 +170,7 @@ header.sticky {
   position: fixed;
   width: 100%;
   z-index: 999;
-  background: #030E14;
+  background: #2e3192;
 }
 
 header.sticky #navbarNav {
@@ -189,13 +184,45 @@ header.sticky img {
 /* top banner */
 .top-banner {
   background: url("/assets/images/top-banner.webp");
-  background-repeat: no-repeat;
   background-size: cover;
-  padding: 165px 0;
+  padding: 165px 0 40px;
+  animation: mymove 500s linear infinite;
+  position: relative;
+}
+
+.top-banner:after {
+  content: "";
+  background-image: url("/assets/images/vector.webp");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+@keyframes mymove {
+  0% {
+    background-position: -10000px 0px;
+  }
+
+  100% {
+    background-position: 0px 0px;
+  }
 }
 
 .top-banner .center-col {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 1;
+  position: relative;
 }
 
 .top-banner .center-col h1 {
@@ -204,6 +231,7 @@ header.sticky img {
   font-size: 68.9193px;
   line-height: 65px;
   color: #F5F5F5;
+  margin-bottom: 0;
 }
 
 .top-banner .center-col p {
@@ -212,6 +240,113 @@ header.sticky img {
   line-height: 1.5;
   color: #ffffff;
   margin-bottom: 0;
+}
+
+.top-banner .center-col .rating-sec {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.top-banner .center-col .rating-sec p {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.top-banner .center-col .rating-sec span {
+  font-weight: 400;
+  font-size: 10.0281px;
+  color: white;
+}
+
+.top-banner .center-col .rating-sec .star i {
+  color: #00E984;
+}
+
+.top-banner .slider-sec {
+  border: 0.4px solid rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  padding: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+.top-banner .slider-sec .slider-body {
+  background: #ffffff26;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.top-banner .slider-sec .slider-body img {
+  padding: 0px 8px;
+}
+
+/* end */
+
+/* sec-two */
+.sec-two {
+  padding: 60px 0;
+}
+
+.sec-two .section-title {
+  text-align: start;
+}
+
+.sec-two .btn-sec button {
+  border-color: #2E3192;
+  background: #2E3192;
+  color: white;
+}
+
+.sec-two .btn-sec {
+  margin-top: 30px;
+}
+
+.sec-two .btn-sec button:hover {
+  background: transparent;
+  color: #2E3192;
+}
+
+.sec-two .right {
+  background-image: url("/assets/images/form-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 30px 0 0;
+}
+
+.sec-two .right h3 {
+  text-align: center;
+  color: #e4ff00;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 38px;
+  background: #23298B;
+  padding: 30px 0;
+  margin-bottom: 0;
+}
+
+.sec-two .right .form-sec {
+  padding: 30px;
+  position: relative;
+}
+
+.sec-two .right .form-sec:before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/top-form-gif.gif");
+  background-repeat: no-repeat;
+  z-index: 1;
+  mix-blend-mode: lighten;
+  filter: blur(4.0281px);
 }
 
 /* end */
@@ -230,17 +365,17 @@ input::-webkit-inner-spin-button {
   width: 100%;
   padding: 16px 15px;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #1e1e1e42;
+  border: 2px solid #CED4DA;
   color: #ffffff !important;
   background-color: transparent;
 }
 
 .form-control:focus {
   background-color: transparent;
-  border-color: #D3ED05;
+  border-color: #000000;
   box-shadow: none !important;
   outline: none !important;
 }

@@ -1,7 +1,10 @@
 import { Inter, Advent_Pro } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/globals.css";
+import 'remixicon/fonts/remixicon.css';
 import Header from "../_components/Header";
+import Footer from "../_components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const interSans = Inter({
   subsets: ["latin"],
@@ -26,6 +29,8 @@ export default function RootLayout({ children }) {
       <body className={`${interSans.variable} ${adventPro.variable}`}>
         <Header />
         {children}
+        <Toaster position="top-right" reverseOrder={false} />
+        <Footer />
       </body>
     </html>
   );
