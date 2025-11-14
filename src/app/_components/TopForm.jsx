@@ -27,8 +27,8 @@ const TopForm = () => {
         }
 
         // form sending to email
-        const formData = new FormData(form);
-        await sendMail(formData);
+        // const formData = new FormData(form);
+        // await sendMail(formData);
         // end
     };
 

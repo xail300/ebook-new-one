@@ -10,8 +10,8 @@ body {
   font-size: 15px;
   background: #ffffff;
   line-height: 1.5;
-  color: #686868;
-  font-weight: 300;
+  color: #485070;
+  font-weight: 400;
   font-family: "Inter", sans-serif;
 }
 
@@ -30,7 +30,7 @@ h6 {
 
 p {
   margin-bottom: 15px;
-  color: #686868;
+  color: #485070;
 }
 
 /* Navbar */
@@ -152,7 +152,6 @@ ul.dropdown-menu {
 
 .section-title p {
   font-size: 16px;
-  font-weight: 400;
 }
 
 /* header */
@@ -236,7 +235,6 @@ header.sticky img {
 
 .top-banner .center-col p {
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5;
   color: #ffffff;
   margin-bottom: 0;
@@ -347,6 +345,162 @@ header.sticky img {
   z-index: 1;
   mix-blend-mode: lighten;
   filter: blur(4.0281px);
+}
+
+/* end */
+
+/* sec-three */
+.sec-three {
+  background-color: #F8F9FF;
+  padding: 60px 0;
+  position: relative;
+}
+
+.sec-three .left-img,
+.sec-three .right-img {
+  position: absolute;
+  width: 255px;
+  height: 460px;
+  top: 25px;
+  left: 20px;
+}
+
+.sec-three .left-img>img,
+.sec-three .right-img>img {
+  animation: up 3s ease-in-out infinite;
+}
+
+.sec-three .right-img {
+  right: 20px !important;
+  left: auto;
+}
+
+.sec-three .center-col .book-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sec-three .center-col .book-list .book-list-inner {
+  background-color: #FFFFFF;
+  border: 1px solid #DFDFDF;
+  border-radius: 7.6803px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all .3s;
+  width: 32%;
+  position: relative;
+}
+
+.sec-three .center-col .book-list .book-list-inner:hover {
+  background-color: #2E3192;
+}
+
+.sec-three .center-col .book-list .book-list-inner:hover span {
+  color: white;
+}
+
+.sec-three .center-col .book-list .book-list-inner>img,
+.sec-three .center-col .book-list .book-list-inner .book-hover img {
+  filter: brightness(0.1);
+}
+
+.sec-three .center-col .book-list .book-list-inner:hover>img {
+  filter: brightness(0) invert(1);
+}
+
+.sec-three .center-col .book-list .book-list-inner span,
+.sec-three .center-col .book-list .book-list-inner .book-hover h4 {
+  color: #030303;
+  font-weight: 500;
+  font-size: 21px;
+  font-family: "Advent Pro", sans-serif;
+}
+
+.sec-three .center-col .book-list .book-list-inner .book-hover h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.sec-three .center-col .book-list .book-list-inner .book-hover p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.sec-three .center-col .book-list .book-list-inner .book-hover {
+  position: absolute;
+  top: 0;
+  background: #FFFFFF;
+  box-shadow: 0px 5.39842px 13.496px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 100%;
+  z-index: 1;
+  top: 80%;
+  left: 45%;
+  visibility: hidden;
+}
+
+.sec-three .center-col .book-list .book-list-inner:hover .book-hover {
+  visibility: visible;
+}
+
+
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* end */
+
+/* sec-four */
+.sec-four {
+  padding: 60px 0;
+}
+
+.sec-four .sec-four-box {
+  border: 2.05278px solid #DFDFDF;
+  border-radius: 10.2639px;
+  padding: 30px;
+  text-align: center;
+  transition: all .3s;
+}
+
+.sec-four .sec-four-box i {
+  color: #3ab781;
+  font-size: 30px;
+}
+
+.sec-four .sec-four-box h4 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sec-four .sec-four-box p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.sec-four .sec-four-box:hover h4,
+.sec-four .sec-four-box:hover p {
+    color: white;
+}
+
+.sec-four .sec-four-box:hover {
+    background: #2e3192;
+    border-color: #2e3192;
 }
 
 /* end */
