@@ -1,8 +1,10 @@
 'use client'
+import { useModal } from '@/context/ModalContext';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react'
+
 
 
 const Header = () => {
@@ -53,7 +55,7 @@ const Header = () => {
     // end
 
     // Modal context
-    // const { modalShow } = useModal();
+    const { modalShow } = useModal();
     // end
 
     // active link logic
@@ -126,7 +128,7 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className="d-xl-block d-none">
-                            <button className="btn btn-theme">Get Started </button>
+                            <button onClick={modalShow} className="btn btn-theme">Get Started </button>
                         </div>
                     </div>
                 </nav>

@@ -5,6 +5,7 @@ import 'remixicon/fonts/remixicon.css';
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import { Toaster } from "react-hot-toast";
+import { ModalProvider } from "@/context/ModalContext";
 
 const interSans = Inter({
   subsets: ["latin"],
@@ -27,10 +28,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${interSans.variable} ${adventPro.variable}`}>
-        <Header />
-        {children}
-        <Toaster position="top-right" reverseOrder={false} />
-        <Footer />
+        <ModalProvider>
+          <Header />
+          {children}
+          <Toaster position="top-right" reverseOrder={false} />
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );

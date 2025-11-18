@@ -1,8 +1,10 @@
 import BookList from "@/_components/BookList";
 import Button from "@/_components/Button";
+import FaqsSec from "@/_components/FaqsSec";
 import SecFiveContent from "@/_components/SecFiveContent";
 import SecFourBoxContent from "@/_components/SecFourBoxContent";
 import SectionTitle from "@/_components/SectionTitle";
+import Testimonials from "@/_components/Testimonials";
 import TopForm from "@/_components/TopForm";
 import TopSlider from "@/_components/TopSlider";
 import Image from "next/image";
@@ -188,6 +190,129 @@ export default function Home() {
           </Row>
         </Container>
       </section>
+      {/* end */}
+      {/* sec-six */}
+      <section className="sec-six">
+        <Container>
+          <Row className="justify-content-center">
+            <Col xl={8} lg={8} md={8}>
+              <SectionTitle
+                heading="We're Your Go-To Platform"
+                colorHeading="for All Your Ghostwriting & Publishing Needs"
+                HeadingTag="h3"
+                descOne="Looking for top-notch ghostwriting services led by industry experts? Our premium quality work
+                ensures your legacy is marked with the finest words crafted by our experts. Whether you need eBook
+                ghostwriting or book writing service, we've got you covered. From concept to manuscript to the final
+                product on shelves, we ensure a seamless transition."
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col xl={4} lg={4} md={4}>
+              <div className="sec-six-inner">
+                <Image src="/assets/images/icon-1.png" alt="" width={70} height={70} />
+                <h4>100% Ownership and Royalties</h4>
+                <p>With us, you retain 100%
+                  copyrights and royalties! We
+                  handle everything else, from
+                  ghostwriting to global publishing
+                  and promotion.</p>
+              </div>
+              <div className="sec-six-inner">
+                <h4>Dedicated Ghostwriters For Every Genre</h4>
+                <p>From fiction, non-fiction to
+                  academic and business, we have
+                  ghostwriters for every genre for
+                  your book.</p>
+              </div>
+            </Col>
+            <Col xl={4} lg={4} md={4}>
+              <div className="sec-six-inner center">
+                <h4 className="text-white">E-book Website</h4>
+              </div>
+              <div className="sec-six-inner pb-0">
+                <h4>ROI Centred Book Marketing</h4>
+                <p>For new writers, we offer end-to-
+                  end book writing services to help
+                  them at every stage of their book's
+                  journey.</p>
+                <Image src="/assets/images/icon-3.png" alt="" className="m-auto" width={231} height={225} />
+              </div>
+            </Col>
+            <Col xl={4} lg={4} md={4}>
+              <div className="sec-six-inner">
+                <Image src="/assets/images/icon-2.png" alt="" width={70} height={70} />
+                <h4>Special Support For First-Time Authors</h4>
+                <p>For new writers, we offer end-to-
+                  end book writing services to help
+                  them at every stage of their book's
+                  journey.</p>
+              </div>
+              <div className="sec-six-inner">
+                <h4>Committed Teams For Each Project</h4>
+                <p>A dedicated team and project
+                  manager to keep you involved and
+                  informed at every stage of your
+                  book writing project.</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      {/* end */}
+      {/* faqs */}
+      <section className="faqs-sec">
+        <Container>
+          <Row className="justify-content-center">
+            <Col xl={8} lg={8} md={8}>
+              <SectionTitle
+                heading="Frequently Asked"
+                colorHeading="Questions"
+                HeadingTag="h3"
+                descOne="Looking for top-notch ghostwriting services led by industry experts? Our premium quality work
+                ensures your legacy is marked with the finest words crafted by our experts. Whether you need eBook
+                ghostwriting or book writing service, we've got you covered. From concept to manuscript to the final
+                product on shelves, we ensure a seamless transition."
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col xl={12} lg={12} md={12}>
+              <FaqsSec />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      {/* end */}
+      {/* testimonials sec */}
+      <section className="testimonial-sec">
+        <Container>
+          <Row className="justify-content-center">
+            <Col xl={6} lg={6} md={6}>
+              <SectionTitle
+                heading="Happy Clients Of Our"
+                colorHeading="eBook Ghostwriting Service"
+                HeadingTag="h3"
+              />
+            </Col>
+            <Col xl={6} lg={6} md={6}>
+              <SectionTitle
+                descOne="The following are the testimonials dropped by the clients for our Scopus paper publication support. We helped them get their research and thesis published on renowned platforms."
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col xl={4} lg={4} md={4}>
+              <div className="left" style={{ position: "relative", width: "407px", height: "476px" }}>
+                <Image src="/assets/images/img-6.png" alt="" fill sizes="(max-width: 767px) 100vw" />
+              </div>
+            </Col>
+            <Col xl={8} lg={8} md={8}>
+              <Testimonials />
+            </Col>
+          </Row>
+        </Container>
+      </section >
       {/* end */}
     </>
   );
